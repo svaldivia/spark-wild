@@ -136,7 +136,7 @@ module.exports = function(grunt) {
 
 	require('load-grunt-tasks')(grunt);
 	grunt.registerTask('default', [
-		//'startMongo',
+		'startMongo',
 		'uglify:build',
 		'sass',
 		'autoprefixer:main',

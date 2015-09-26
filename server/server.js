@@ -5,6 +5,7 @@ var http =  require('http').Server(app);
 var io = require('socket.io')( http );
 var config = require( './app/config' )[ env ];
 
+require( './app/db' )( app, config );
 require( './app/express' )( app, config );
 require( './app/routes' )( app, config );
 require( './app/chat' )( app, config, http, io );
