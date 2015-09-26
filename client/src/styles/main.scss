@@ -21,6 +21,13 @@ $phoneContainerHeight: 674px;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('/assets/montserrat/Montserrat-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html,
 body {
     min-height: 700px;
@@ -217,5 +224,59 @@ hr {
         background: url( '/assets/facebook-login.jpg' ) no-repeat center;
         background-size: $phoneContainerWidth 88px;
         cursor: pointer;
+    }
+}
+
+.chats #main {
+    .navbar {
+        @include linear-gradient(#199e6c, #4da483);
+    }
+    background: #ecf4e9;
+    .chat {
+        position: relative;
+        border-bottom: 1px solid #ccc;
+        height: 75px;
+        a {
+            color: #000;
+            img {
+                position: absolute;
+                left: 15px;
+                top: 10px;
+                border-radius: 100%;
+                border: 2px solid #fff;
+            }
+            h4 {
+                font-family: 'Montserrat-Regular';
+                position: absolute;
+                font-size: 16px;
+                top: 10px;
+                left: 75px;
+                margin: 0;
+                text-transform: uppercase;
+            }
+            span {
+                font-family: 'Montserrat-Regular';
+                position: absolute;
+                top: 40px;
+                left: 75px;
+                opacity: 0.5;
+            }
+            .time {
+                font-family: 'Montserrat-Regular';
+                position: absolute;
+                right: 15px;
+                top: 10px;
+                color: #A6ABA4;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-family: arial;
+            }
+            &:hover {
+                text-decoration: none;
+                h4, span, .time {
+                    text-decoration: none;
+                }
+            }
+        }
     }
 }

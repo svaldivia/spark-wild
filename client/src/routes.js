@@ -8,6 +8,7 @@ angular.module('spark-wild')
 			// add new routes here
 			.when( '/map', {templateUrl: '/partials/map/mapView', controller: 'mapCtrl'} )
 			.when( '/chat', {templateUrl: '/partials/chat/chatView', controller: 'chatCtrl'} )
+			.when( '/chats', {templateUrl: '/partials/chats/chatsView', controller: 'chatsCtrl'} )
 			.when( '/profile', {templateUrl: '/partials/profile/profileView', controller: 'profileCtrl'} )
 			.when( '/', {templateUrl: '/partials/home/homeView', controller: 'homeCtrl'} );
 	}])
@@ -24,6 +25,9 @@ angular.module('spark-wild')
 					break;
 				case '/partials/chat/chatView':
 					$rootScope.bodyClass = 'chat';
+					break;
+				case '/partials/chats/chatsView':
+					$rootScope.bodyClass = 'chats';
 					break;
 				case '/partials/profile/profileView':
 					$rootScope.bodyClass = 'profile';
