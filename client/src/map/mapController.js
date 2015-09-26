@@ -1,7 +1,14 @@
 'use strict';
 
-angular.module('spark-wild').controller('mapCtrl', ['$scope','uiGmapGoogleMapApi', function($scope, uiGmapGoogleMapApi) {
-	    
+angular.module('spark-wild').controller('mapCtrl', ['$rootScope', '$scope', '$location', 'uiGmapGoogleMapApi', 'Facebook', function($rootScope, $scope, $location, uiGmapGoogleMapApi, Facebook) {
+
+	Facebook.getLoginStatus( function( response ) {
+		if( response.status !== 'connected' ) {
+			$rootScope.loggedIn = false;
+			$location.path( '/' );
+		}
+	});
+
 	    uiGmapGoogleMapApi.then(function(maps) {
 
 			//zoom 1 = world, 20 is smallest zoom.
