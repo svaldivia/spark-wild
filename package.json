@@ -6,7 +6,7 @@
   "author": "https://github.com/spark-wild/spark-wild/graphs/contributors",
   "repository": {
     "type": "git",
-    "url": "git@github.com:spark-wild/spark-wild.git"
+    "url": "git+ssh://git@github.com/spark-wild/spark-wild.git"
   },
   "main": "server.js",
   "engines": {
@@ -44,5 +44,10 @@
   },
   "scripts": {
     "postinstall": "npm install -g grunt-cli && npm prune && sudo gem update --system && sudo gem install sass"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/spark-wild/spark-wild/issues"
+  },
+  "homepage": "https://github.com/spark-wild/spark-wild#readme",
+  "license": "ISC"
 }
