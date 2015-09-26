@@ -6,4 +6,8 @@ module.exports = function( app, config ) {
 	app.get( '*', function( req, res ) {
 		res.render( 'index', {isDev: app.isDev(), liveReloadPort: config.liveReloadPort} );
 	} );
+
+	app.post('/saveuser', function(req, res){
+		res.send("POST BRO");
+	});
 };
