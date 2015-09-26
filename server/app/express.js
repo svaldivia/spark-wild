@@ -17,4 +17,6 @@ module.exports = function( app, config ) {
 	app.use( express.static( config.rootPath + '/client', {
 		dotfiles: 'ignore'
 	} ) );
+
+	app.use( '/fonts/bootstrap/', express.static( config.rootPath + '/client/vendor/bootstrap-sass/assets/fonts/bootstrap/' ) );
 };

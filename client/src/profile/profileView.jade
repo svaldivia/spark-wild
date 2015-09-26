@@ -1,16 +1,12 @@
 h2 Your Profile
 
-img(src='http://xoo.me/template/6259/p16hjehcpb1oem1vkkf6012tsjfl9-thumb.jpg' class="user-profile-photo")
+img(src='{{ picture }}')
+
+h3 {{ name }}
+h4 {{ location }}
+p {{ bio }}
 
 form(ng-submit="processForm()")
-    div.input
-        h3 Name
-        //- input(type="text", name ="user-name" ng-model="formData.user_name")
-    
-    div.input
-        h3 Location
-        //- input(type="text", name ="user-location" ng-model="formData.user_location")
-        
     div.input
         h3 What Activities Do You Like?
         label

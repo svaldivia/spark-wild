@@ -1,1 +1,8 @@
-h2 Home View
+h2 Spark Wild
+
+div.alert.alert-danger(role="alert", ng-show="error")
+  span.glyphicon.glyphicon-exclamation-sign(aria-hidden="true")
+  span.sr-only Error:
+  span &nbsp; {{ error }}
+
+button(ng-click="login()") Login
