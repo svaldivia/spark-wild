@@ -21,6 +21,7 @@ angular.module('spark-wild').controller('mapCtrl', ['$rootScope', '$scope', '$lo
 	    	$scope.map = { center: { latitude: userLat, longitude: userLng }, zoom: startZoom, bounds: { } };
 	    	$scope.options = {scrollwheel: false, disableDefaultUI: true}
 
+			var image = "/assets/pin.png"
 	    	//adding marker for current user
 		    $scope.marker = {
 				id: 0,
@@ -28,8 +29,9 @@ angular.module('spark-wild').controller('mapCtrl', ['$rootScope', '$scope', '$lo
 					latitude: userLat,
 					longitude: userLng
 				},
-				options: { 
+				options: {
 					draggable: false,
+					icon:image,
 				},
 				events: {
 					click: function(marker, eventName, args) {
