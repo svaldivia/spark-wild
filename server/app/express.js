@@ -19,4 +19,5 @@ module.exports = function( app, config ) {
 	} ) );
 
 	app.use( '/fonts/bootstrap/', express.static( config.rootPath + '/client/vendor/bootstrap-sass/assets/fonts/bootstrap/' ) );
+	app.use( '/assets/', express.static( config.rootPath + '/client/src/assets/' ) );
 };
