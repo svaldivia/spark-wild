@@ -1,6 +1,6 @@
 @import "bootstrap";
 
-$phoneContainerWidth: 414px;
+$phoneContainerWidth: 416px;
 $phoneContainerHeight: 672px;
 
 @mixin linear-gradient($color-stops...) {
@@ -110,4 +110,33 @@ hr {
 .angular-google-map-container {
     width: $phoneContainerWidth;
     height: $phoneContainerHeight;
+}
+
+
+// login page
+.home #main {
+    position: relative;
+    background: url( '/assets/splash_background.jpg' );
+    background-size: $phoneContainerWidth 738px;
+    background-position: 0 -75px;
+    .logo {
+        margin-top: 150px;
+        background: url( '/assets/logo.png' ) no-repeat center;
+        background-size: 226px 91px;
+        width: 226px;
+        height: 91px;
+        text-indent: -9999px;
+        margin: 20px auto 0;
+    }
+    .login {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-indent: -9999px;
+        width: $phoneContainerWidth;
+        height: 88px;
+        background: url( '/assets/facebook-login.jpg' ) no-repeat center;
+        background-size: $phoneContainerWidth 88px;
+        cursor: pointer;
+    }
 }
