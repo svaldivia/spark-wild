@@ -13,9 +13,10 @@ module.exports = function(grunt) {
 			vendorDir + '/angular-resource/angular-resource.js',
 			vendorDir + '/lodash/lodash.js',
 			vendorDir + '/angular-google-maps/dist/angular-google-maps.js',
-			vendorDir + '/angular-simple-logger/dist/angular-simple-logger.js'
+			vendorDir + '/angular-simple-logger/dist/angular-simple-logger.js',
 			vendorDir + '/ng-lodash/build/ng-lodash.js',
-			vendorDir + '/angular-bootstrap/ui-bootstrap.js'
+			vendorDir + '/angular-bootstrap/ui-bootstrap.js',
+			vendorDir + '/angular-facebook/lib/angular-facebook.js'
 		],
 		jsServerFiles = [
 			'server.js',
