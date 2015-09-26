@@ -14,9 +14,18 @@ $phoneContainerHeight: 672px;
     background: linear-gradient($direction, $color-stops);
 }
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/montserrat/Montserrat-Hairline.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html,
 body {
     min-height: 700px;
+    font-family: "Montserrat";
+    font-size: 1em;
 }
 
 /** these are for the demo only */
@@ -43,29 +52,52 @@ body {
 
     // background-color: red;
 }
+.activity-container{
+    padding:0;
+}
 .activity {
-
+    width: 100%;
+    // height:182px;
 }
 
-// .wrapper {
-//     margin: 0 6.25% 0 6.25%;
-//     width: 87.5%;
-// }
 .profile-name {
-    // font-size: 55px;
+    font-size: 2em;
+    text-align: center;
     // font-family: "Montserrat";
     // color: rgb( 255, 255, 255 );
     // line-height: 0.545;
-    // text-align: center;
 }
+
+.row{
+    margin:0;
+}
+
+hr {
+    margin: 0;
+}
+
+.page-title{
+    margin: 28px 24%;
+    text-align: center;
+}
+
+.button-bottom{
+    width:100%;
+    position: relative;
+    bottom: 0;
+}
+
 .user-profile-photo {
-    clip-path: circle(100px at center);
-    -webkit-clip-path: circle(100px at center);
-
-    // margin: 0 40% 0 40%;
-    // width: 47%;
+    width: 35%;
+    border-radius: 100%;
+    border: 5px white solid;
+    margin: 0 32%;
+    margin-top: 25px;
 }
 
+.user-location {
+
+}
 // <End> Profile Page
 
 .angular-google-map-container {
