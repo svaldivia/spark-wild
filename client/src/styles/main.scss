@@ -1,9 +1,8 @@
 @import "bootstrap";
-
 $phoneContainerWidth: 416px;
 $phoneContainerHeight: 674px;
-
 @mixin linear-gradient($color-stops...) {
+
     // @if is-direction($direction) == false {
     //     $color-stops: $direction, $color-stops;
     //     $direction: 180deg;
@@ -13,10 +12,9 @@ $phoneContainerHeight: 674px;
     background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
     background: linear-gradient($direction, $color-stops);
 }
-
 @font-face {
     font-family: 'Montserrat';
-    src: url('/assets/montserrat/Montserrat-Hairline.otf');
+    src: url("/assets/montserrat/Montserrat-Hairline.otf");
     font-weight: normal;
     font-style: normal;
 }
@@ -34,14 +32,13 @@ body {
     font-family: "Montserrat";
     font-size: 1em;
 }
-
 .container {
     position: relative;
 }
 
 /** these are for the demo only */
 #demo-wrap {
-    background: url( '/assets/iphone.png' ) no-repeat;
+    background: url(" '/assets/iphone.png' ") no-repeat;
     width: 461px;
     height: 960px;
     margin: 50px auto;
@@ -52,7 +49,6 @@ body {
         padding: 0;
     }
 }
-
 #main {
     @include linear-gradient(#199e6c, #4da483);
     color: #fff;
@@ -63,16 +59,16 @@ body {
 
     // background-color: red;
 }
-.activity-container{
+.activity-container {
     width: 190px;
     float: left;
     margin: 1px;
-    border: 1px solid #54B28D;
-    background: #54B28D;
+    border: 1px solid #54b28d;
+    background: #54b28d;
     padding: 8px;
     border-radius: 2px;
     &.selected {
-       background: #4ba886;
+        background: #4ba886;
     }
 }
 .activity {
@@ -82,9 +78,9 @@ body {
     height: 90px;
     position: relative;
     &.selected {
-       span {
-        color: #000;
-       }
+        span {
+            color: #000;
+        }
     }
     span {
         text-transform: uppercase;
@@ -97,117 +93,141 @@ body {
         width: 100%;
     }
     &#hiking {
-        background: url( '/assets/hiking.png' ) no-repeat center top;
+        background: url(" '/assets/hiking.png' ") no-repeat center top;
     }
     &#biking {
-        background: url( '/assets/biking.png' ) no-repeat center top;
+        background: url(" '/assets/biking.png' ") no-repeat center top;
     }
     &#climbing {
-        background: url( '/assets/climbing.png' ) no-repeat center top;
+        background: url(" '/assets/climbing.png' ") no-repeat center top;
     }
     &#running {
-        background: url( '/assets/running.png' ) no-repeat center top;
+        background: url(" '/assets/running.png' ") no-repeat center top;
     }
     &#tennis {
-        background: url( '/assets/tennis.png' ) no-repeat center top;
+        background: url(" '/assets/tennis.png' ") no-repeat center top;
     }
     &#walking {
-        background: url( '/assets/walking.png' ) no-repeat center top;
+        background: url(" '/assets/walking.png' ") no-repeat center top;
     }
     &:hover {
         color: #fff;
         text-decoration: none;
     }
 }
-
 .profile-name {
     font-size: 30px;
     text-align: center;
     font-weight: bold;
     font-family: "Montserrat";
 }
-
-.row{
+.row {
     text-align: center;
-    margin:0;
+    margin: 0;
 }
-
 hr {
     margin: 0;
     border: 0;
     height: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-
-.page-title{
+.page-title {
     margin: 20px auto;
     text-align: center;
     font-size: 18px;
     text-transform: uppercase;
 }
-
-.button-bottom{
-    width:100%;
+.button-bottom {
+    width: 100%;
     position: absolute;
     bottom: 0;
 }
-
 .user-profile-photo {
     width: 25%;
     border-radius: 100%;
     border: 3px white solid;
-    margin: 0 auto;
-    margin-top: 25px;
+    margin: 25px auto 0;
 }
-
 .user-location {
     color: rgba( 255, 255, 255, 0.502 );
     font-size: 16px;
     font-weight: bold;
 }
-// <End> Profile Page
 
-.navbar-user{
+// <End> Profile Page
+.navbar-user {
     padding: 0;
     width: 10%;
 }
-.navbar-chat{
-    width:15%;
+.navbar-chat {
+    width: 15%;
 }
-.navbar-title{
-    width:45%;
+.navbar-title {
+    width: 45%;
     margin-left: 68px;
     margin-right: 45px;
 }
-
-.nav-wrapper{
+.nav-wrapper {
     padding: 15px;
 }
-
-.chat-background{
+.chat-background {
     background-color: #ecf4e9;
+    height: 100%;
+    position: relative;
 }
-
-.navbar-back{
+.navbar-back {
     width: 6%;
     float: left;
+    margin-top: 8px;
+}
+.username-chat {
+    margin: 0 20px;
+    float: left;
+}
+.chatbox {
+    color: black;
+    height: 50px;
+    padding: 5px;
+    width: 86%;
+}
+.send-message {
+    color: black;
+    height: 50px;
 }
 
+//Messages
+.message {
+    display: inline-block;
+    max-width: 200px;
+    color:black;
+    padding: 5px;
+    border-radius: 4px;
+    position: relative;
+    border-width: 2px;
+    border-style: solid;
+    border-color: grey;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 10px;
+    padding: 8px;
+}
+.clear {
+    clear: both;
+}
 .angular-google-map-container {
     width: $phoneContainerWidth;
     height: $phoneContainerHeight;
 }
 
-
 // login page
 .home #main {
     position: relative;
-    background: url( '/assets/splash_background.jpg' );
+    background: url(" '/assets/splash_background.jpg' ");
     background-size: $phoneContainerWidth 738px;
     background-position: 0 -75px;
     .logo {
         margin-top: 150px;
-        background: url( '/assets/logo.png' ) no-repeat center;
+        background: url(" '/assets/logo.png' ") no-repeat center;
         background-size: 226px 91px;
         width: 226px;
         height: 91px;
@@ -221,7 +241,7 @@ hr {
         text-indent: -9999px;
         width: $phoneContainerWidth;
         height: 88px;
-        background: url( '/assets/facebook-login.jpg' ) no-repeat center;
+        background: url(" '/assets/facebook-login.jpg' ") no-repeat center;
         background-size: $phoneContainerWidth 88px;
         cursor: pointer;
     }

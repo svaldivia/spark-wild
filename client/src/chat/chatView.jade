@@ -2,11 +2,11 @@ nav.navbar.navbar-default.navbar-static-top
 	div.container-fluid.nav-wrapper
 			a(href="/map")
 				img.navbar-back(src="/assets/back.png")
-			h2 Some Name
+			h2.username-chat Some Name
 div.chat-background
 	div.messages(ng-repeat="message in messages")
-		span {{ message }}
+		span.message {{ message }}
 
-	form.chat(ng-submit="submitMessage()")
-		input(type="text" placeholder="Enter message" ng-model="newMessage")
-		button(type="submit") Submit
+	form.chat.button-bottom(ng-submit="submitMessage()")
+		input.chatbox(type="text" placeholder="Start a conversation" ng-model="newMessage")
+		button.send-message(type="submit") Send
