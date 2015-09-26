@@ -11,7 +11,6 @@ module.exports = function(grunt) {
 			vendorDir + '/angular/angular.js',
 			vendorDir + '/angular-route/angular-route.js',
 			vendorDir + '/angular-resource/angular-resource.js',
-<<<<<<< HEAD
 			vendorDir + '/lodash/lodash.js',
 			vendorDir + '/angular-google-maps/dist/angular-google-maps.js',
 			vendorDir + '/angular-simple-logger/dist/angular-simple-logger.js'
