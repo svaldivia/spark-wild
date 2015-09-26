@@ -1,6 +1,13 @@
 'use strict';
 
-angular.module('spark-wild').controller( 'profileCtrl', [ '$scope', '$http', '$location', function( $scope, $http, $location ) {
+angular.module('spark-wild').controller( 'profileCtrl', [ '$rootScope', '$scope', '$http', '$location', 'Facebook', function( $rootScope, $scope, $http, $location, Facebook ) {
+
+  Facebook.getLoginStatus( function( response ) {
+    if( response.status !== 'connected' ) {
+      $rootScope.loggedIn = false;
+      $location.path( '/' );
+    }
+  });
 
   $scope.formData = {};
 
