@@ -7,7 +7,12 @@ module.exports = function(grunt) {
 			srcDir + '/*.js',
 			srcDir + '/**/*.js'
 		],
-		jsVendorFiles = [],
+		jsVendorFiles = [
+			vendorDir + '/angular/angular.js',
+			vendorDir + '/angular-route/angular-route.js',
+			vendorDir + '/angular-resource/angular-resource.js',
+			vendorDir + '/ng-lodash/build/ng-lodash.js'
+		],
 		jsServerFiles = [
 			'server.js',
 			'server/*.js',
