@@ -1,0 +1,10 @@
+{
+  "name": "spark-wild",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap-sass": "latest"
+  },
+  "devDependencies": {
+    "livereload-js": "latest"
+  }
+}
