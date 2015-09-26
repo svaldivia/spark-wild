@@ -1,1 +1,14 @@
-h2 Hello World
+doctype
+html
+    head
+        title Spark Wild
+        // todo: make this more dynamic
+        base(href="/")
+        link(rel="stylesheet", href="/build/spark-wild.css")
+        if isDev
+            script(type="text/javascript", src="//localhost:#{liveReloadPort}/livereload.js")
+
+    body(ng-app='spark-wild' class='{{bodyClass}}')
+        script(type="text/javascript", src="/build/vendors.js")
+        script(type="text/javascript", src="/build/spark-wild.js")
+        div(ng-view).container#main
