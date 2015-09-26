@@ -2,7 +2,11 @@
   "name": "spark-wild",
   "version": "0.0.1",
   "dependencies": {
-    "bootstrap-sass": "latest"
+    "bootstrap-sass": "latest",
+    "angular": "~1.4.6",
+    "angular-route": "~1.4.6",
+    "angular-resource": "~1.4.6",
+    "ng-lodash": "~0.2.3"
   },
   "devDependencies": {
     "livereload-js": "latest"
