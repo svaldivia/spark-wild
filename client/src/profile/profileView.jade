@@ -1,27 +1,30 @@
-h2 Your Profile
-
-img(src='{{ picture }}')
-
-h3 {{ name }}
-h4 {{ location }}
-p {{ bio }}
-
-form(ng-submit="processForm()")
-    div.input
-        h3 What Activities Do You Like?
-        label
-            input(type="checkbox", ng-model="formData.activities.hiking")
-            = "Hiking"
-        label
-            input(type="checkbox", ng-model="formData.activities.climbing")
-            = "Climbing"
-        label
-            input(type="checkbox", ng-model="formData.activities.biking")
-            = "Biking"
-        label
-            input(type="checkbox", ng-model="formData.activities.running")
-            = "Running"
-    div.actions
-        input(type="submit" class='btn btn-primary' value="Add")
-
-pre {{ formData }}
+div(class="container-fluid")
+    div(class="row")
+        h2(class="") Choose your activities
+    hr
+    div(class="row")
+        img(src='{{ picture }}' class="user-profile-photo")
+        span(class="profile-name") {{ name }}
+        h3 {{ location }}
+        
+    form(ng-submit="processForm()")
+        div.input
+            h3 What Activities Do You Like?
+            div(class="activity")
+                label
+                    input(type="checkbox", ng-model="formData.activities.hiking")
+                    = "Hiking"
+            div(class="activity")
+                label
+                    input(type="checkbox", ng-model="formData.activities.climbing")
+                    = "Climbing"
+            div(class="activity")
+                label
+                    input(type="checkbox", ng-model="formData.activities.biking")
+                    = "Biking"
+            div(class="activity")
+                label
+                    input(type="checkbox", ng-model="formData.activities.running")
+                    = "Running"
+        div.actions
+            input(type="submit" class='btn btn-primary' value="Add")

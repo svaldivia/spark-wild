@@ -1,3 +1,54 @@
 @import "bootstrap";
 
 .angular-google-map-container { height: 400px; width: 400px}
+
+@mixin linear-gradient($color-stops...) {
+    // @if is-direction($direction) == false {
+    //     $color-stops: $direction, $color-stops;
+    //     $direction: 180deg;
+    // }
+    $direction: 180deg;
+    background: nth(nth($color-stops, 1), 1);
+    background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+    background: linear-gradient($direction, $color-stops);
+}
+
+html,
+body {
+    height: 100%;
+}
+body {
+    @include linear-gradient(#199e6c, #4da483);
+    color: #fff;
+}
+
+// Profile Page
+.profilePage {
+
+    // background-color: red;
+}
+.activity {
+
+}
+
+// .wrapper {
+//     margin: 0 6.25% 0 6.25%;
+//     width: 87.5%;
+// }
+.profile-name {
+    // font-size: 55px;
+    // font-family: "Montserrat";
+    // color: rgb( 255, 255, 255 );
+    // line-height: 0.545;
+    // text-align: center;
+}
+.user-profile-photo {
+    clip-path: circle(100px at center);
+    -webkit-clip-path: circle(100px at center);
+
+    // margin: 0 40% 0 40%;
+    // width: 47%;
+}
+
+// <End> Profile Page
+>>>>>>> Adding ugly styling for now
