@@ -6,6 +6,13 @@ angular.module('spark-wild').controller( 'profileCtrl', [ '$rootScope', '$scope'
     if( response.status !== 'connected' ) {
       $rootScope.loggedIn = false;
       $location.path( '/' );
+    } else {
+      Facebook.api('me?fields=name', function( response ) {
+        $scope.name = response.name;
+      });
+      Facebook.api('me/picture?width=200', function( response ) {
+        $scope.picture = response.data.url;
+      });
     }
   });
 
