@@ -61,15 +61,17 @@ body {
 }
 .activity {
     width: 100%;
-    margin-bottom: -5px;
+    margin-bottom: -10px;
+    height: 120px;
+}
+
+.activities {
+    padding-top: 20px;
 }
 
 .profile-name {
     font-size: 2em;
-    text-align: center;
-    // font-family: "Montserrat";
-    // color: rgb( 255, 255, 255 );
-    // line-height: 0.545;
+    margin: 0 14%;
 }
 
 .row{
@@ -104,6 +106,7 @@ hr {
 
 .user-location {
     color: rgba( 255, 255, 255, 0.502 );
+    margin: 0 20%;
 }
 // <End> Profile Page
 
