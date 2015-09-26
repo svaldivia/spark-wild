@@ -1,1 +1,31 @@
-h2 Profile View
+h2 Your Profile
+
+img(src='http://xoo.me/template/6259/p16hjehcpb1oem1vkkf6012tsjfl9-thumb.jpg' class="user-profile-photo")
+
+form(ng-submit="processForm()")
+    div.input
+        h3 Name
+        //- input(type="text", name ="user-name" ng-model="formData.user_name")
+    
+    div.input
+        h3 Location
+        //- input(type="text", name ="user-location" ng-model="formData.user_location")
+        
+    div.input
+        h3 What Activities Do You Like?
+        label
+            input(type="checkbox", ng-model="formData.activities.hiking")
+            = "Hiking"
+        label
+            input(type="checkbox", ng-model="formData.activities.climbing")
+            = "Climbing"
+        label
+            input(type="checkbox", ng-model="formData.activities.biking")
+            = "Biking"
+        label
+            input(type="checkbox", ng-model="formData.activities.running")
+            = "Running"
+    div.actions
+        input(type="submit" class='btn btn-primary' value="Add")
+
+pre {{ formData }}
