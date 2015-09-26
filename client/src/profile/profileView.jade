@@ -2,14 +2,11 @@ h2 Your Profile
 
 img(src='{{ picture }}')
 
-form(ng-submit="processForm()")
-    div.input
-        h3 {{ name }}
+h3 {{ name }}
+h4 {{ location }}
+p {{ bio }}
 
-    div.input
-        h3 Location
-        //- input(type="text", name ="user-location" ng-model="formData.user_location")
-        
+form(ng-submit="processForm()")
     div.input
         h3 What Activities Do You Like?
         label

@@ -21,7 +21,7 @@ angular.module('spark-wild').controller('homeCtrl', ['$rootScope', '$location', 
 				$rootScope.loggedIn = false;
 				$scope.error = "Please authorize the Facebook app";
 			}
-      	});
+      	}, {scope: 'email,user_about_me,user_location'});
 	};
 
 }]);
