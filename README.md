@@ -21,7 +21,6 @@ The following dependencies are installed for you as part of a post install hook 
 
 * [Sass](http://www.sass-lang.com/)
 * [grunt-cli](https://github.com/gruntjs/grunt-cli)
-* [scss-lint](https://github.com/causes/scss-lint)
 
 ## installation
 
