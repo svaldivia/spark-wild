@@ -1,30 +1,16 @@
-div(class="container-fluid")
-    div(class="row")
-        h2(class="") Choose your activities
+div.container-fluid
+    div.row
+        h2 Choose your activities
     hr
-    div(class="row")
+    div.row
         img(src='{{ picture }}' class="user-profile-photo")
-        span(class="profile-name") {{ name }}
+        span.profile-name {{ name }}
         h3 {{ location }}
-        
-    form(ng-submit="processForm()")
-        div.input
-            h3 What Activities Do You Like?
-            div(class="activity")
-                label
-                    input(type="checkbox", ng-model="formData.activities.hiking")
-                    = "Hiking"
-            div(class="activity")
-                label
-                    input(type="checkbox", ng-model="formData.activities.climbing")
-                    = "Climbing"
-            div(class="activity")
-                label
-                    input(type="checkbox", ng-model="formData.activities.biking")
-                    = "Biking"
-            div(class="activity")
-                label
-                    input(type="checkbox", ng-model="formData.activities.running")
-                    = "Running"
-        div.actions
-            input(type="submit" class='btn btn-primary' value="Add")
+
+h3 What Activities Do You Like?
+    label.activity(ng-repeat="activity in activities")
+        input(type="checkbox" name="selectedActivities[]" value="{{ activity }}" ng-checked="selectedActivites.indexOf(activity) > -1" ng-click="toggleSelection(activity)")
+        {{ activity }}
+
+    div.actions
+        input(type="submit" class='btn btn-primary' value="Submit")
