@@ -9,7 +9,6 @@ angular.module('spark-wild').controller('chatCtrl', ['$scope', function($scope) 
 	};
 
 	socket.on('chat message', function( message ){
-		console.log( message );
     	$scope.messages.push( message );
     	$scope.$apply();
   	});
