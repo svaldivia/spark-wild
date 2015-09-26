@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('spark-wild').controller('chatCtrl', ['$scope', function($scope) {
-	$scope.messages = [];
+	$scope.messages = [ 'that hike was amazing!' ];
 
 	$scope.submitMessage = function(){
 		socket.emit('chat message', this.newMessage);
