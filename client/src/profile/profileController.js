@@ -7,10 +7,11 @@ angular.module('spark-wild').controller( 'profileCtrl', [ '$rootScope', '$scope'
       $rootScope.loggedIn = false;
       $location.path( '/' );
     } else {
-      Facebook.api('me?fields=name,bio,location', function( response ) {
+      Facebook.api('me?fields=id,name,email,bio,location', function( response ) {
+        $scope.user = response;
         $scope.name = response.name;
         $scope.location = response.location.name;
-        $scope.bio = response.bio;
+        $http.post( '/api/user', $scope.user );
       });
       Facebook.api('me/picture?width=200', function( response ) {
         $scope.picture = response.data.url;
