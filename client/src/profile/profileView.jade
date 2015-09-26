@@ -9,7 +9,7 @@ div.container-fluid
 
 h3 What Activities Do You Like?
     label.activity(ng-repeat="activity in activities")
-        input(type="checkbox" name="selectedActivities[]" value="{{ activity }}" ng-checked="selectedActivites.indexOf(activity) > -1" ng-click="toggleSelection(activity)")
+        input(type="image" src="/src/assets/{{activity}}_button.png" name="selectedActivities[]" value="{{ activity }}" ng-checked="selectedActivites.indexOf(activity) > -1" ng-click="toggleSelection(activity)")
         {{ activity }}
 
     div.actions

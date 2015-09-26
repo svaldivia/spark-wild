@@ -1,6 +1,7 @@
 @import "bootstrap";
 
-.angular-google-map-container { height: 400px; width: 400px}
+$phoneContainerWidth: 414px;
+$phoneContainerHeight: 672px;
 
 @mixin linear-gradient($color-stops...) {
     // @if is-direction($direction) == false {
@@ -15,9 +16,24 @@
 
 html,
 body {
-    height: 100%;
+    min-height: 700px;
 }
-body {
+
+/** these are for the demo only */
+#demo-wrap {
+    background: url( '/assets/iphone.png' ) no-repeat;
+    width: 461px;
+    height: 960px;
+    margin: 50px auto;
+    padding-top: 122px;
+    #main {
+        width: $phoneContainerWidth;
+        height: $phoneContainerHeight;
+        padding: 0;
+    }
+}
+
+#main {
     @include linear-gradient(#199e6c, #4da483);
     color: #fff;
 }
@@ -51,4 +67,8 @@ body {
 }
 
 // <End> Profile Page
-//>>>>>>> Adding ugly styling for now
+
+.angular-google-map-container {
+    width: $phoneContainerWidth;
+    height: $phoneContainerHeight;
+}
