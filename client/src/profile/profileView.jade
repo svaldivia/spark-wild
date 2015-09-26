@@ -10,4 +10,4 @@ div.container-fluid
 		div.activity-container(ng-repeat="activity in activities" ng-class="{ selected: isSelected( activity ) }")
 			a.activity(id="{{ activity }}" ng-click="toggleSelection(activity)")
 				span {{ activity }}
-input.button-bottom(type="image" src="/assets/submit_button.png" value="Submit")
+input.button-bottom(type="image" src="/assets/submit_button.png" ng-click="submit()")

@@ -42,4 +42,8 @@ angular.module('spark-wild').controller( 'profileCtrl', [ '$rootScope', '$scope'
     return (  $scope.selectedActivities.indexOf( activity ) > -1 );
   }
 
+  $scope.submit = function submit() {
+    $location.path( '/map' );
+  }
+
 }]);
