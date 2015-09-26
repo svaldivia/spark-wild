@@ -7,5 +7,6 @@ nav.navbar.navbar-default.navbar-static-top
 				img.navbar-chat(src="/assets/chats_navbar.png")
 
 ui-gmap-google-map(center='map.center', zoom='map.zoom', options='options', bounds="map.bounds")
-	ui-gmap-marker(coords="marker.coords", options="marker.options", events="marker.events", idkey="marker.id")
-	ui-gmap-markers(models="randomMarkers", options="marker.options", coords="'self'", icon="'icon'")
+	ui-gmap-marker(coords="markerMain.coords", options="markerMain.options", events="markerMain.events", idkey="markerMain.id")
+	ui-gmap-marker(coords="markerSecondary.coords", options="markerSecondary.options", events="markerSecondary.events", idkey="markerSecondary.id")
+	ui-gmap-marker(coords="markerThird.coords", options="markerThird.options", events="markerThird.events", idkey="markerThird.id")

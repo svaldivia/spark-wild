@@ -9,13 +9,13 @@ angular.module('spark-wild').controller('chatsCtrl', ['$scope', function($scope)
 			text: 'That hike was amazing!'
 		},
 		{
-			image: '/assets/profile-2.png',
+			image: '/assets/profile-3.png',
 			name: 'Sebastian Valdivia',
 			time: 'Yesterday',
 			text: 'I\'d love to go for a bike ride...'
 		},
 		{
-			image: '/assets/profile-3.png',
+			image: '/assets/profile-2.png',
 			name: 'Marius Ciuchete',
 			time: 'Friday',
 			text: 'Wanna go for a bike ride tomorrow?'

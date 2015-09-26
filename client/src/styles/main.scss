@@ -264,6 +264,8 @@ hr {
                 top: 10px;
                 border-radius: 100%;
                 border: 2px solid #fff;
+                width: 50px;
+                height: 50px;
             }
             h4 {
                 font-family: 'Montserrat-Regular';
@@ -299,4 +301,12 @@ hr {
             }
         }
     }
+}
+
+.more-info {
+    font-size: 50px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #000;
 }
