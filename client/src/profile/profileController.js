@@ -19,38 +19,14 @@ angular.module('spark-wild').controller( 'profileCtrl', [ '$rootScope', '$scope'
     }
   });
 
-  $scope.activities = {
-    hiking:{
-        key: "hiking",
-        label:"Hiking",
-        image:"/assets/hiking_button.png"
-    },
-    walking:{
-        key: "walking",
-        label:"Walking",
-        image:"/assets/walking_button.png"
-    },
-    biking:{
-        key: "biking",
-        label:"Biking",
-        image:"/assets/biking_button.png"
-    },
-    climbing:{
-        key: "climbing",
-        label:"Climbing",
-        image:"/assets/climbing_button.png"
-    },
-    tennis:{
-        key: "tennis",
-        label:"Tennis",
-        image:"/assets/tennis_button.png"
-    },
-    running:{
-        key: "running",
-        label:"Running",
-        image:"/assets/running_button.png"
-    }
-};
+  $scope.activities = [
+    "hiking",
+    "walking",
+    "biking",
+    "climbing",
+    "tennis",
+    "running"
+  ];
 
   $scope.selectedActivities = [];
   $scope.toggleSelection = function toggleSelection( activity ) {
@@ -61,5 +37,9 @@ angular.module('spark-wild').controller( 'profileCtrl', [ '$rootScope', '$scope'
       $scope.selectedActivities.push( activity );
     }
   };
+
+  $scope.isSelected = function isSelected( activity ) {
+    return (  $scope.selectedActivities.indexOf( activity ) > -1 );
+  }
 
 }]);

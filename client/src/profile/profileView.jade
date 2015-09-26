@@ -1,13 +1,13 @@
-label.page-title CHOOSE YOUR ACTIVITIES
+h1.page-title Choose Your Activities
 hr
 div.container-fluid
-    div.row
-        img(src='{{ picture }}' class="user-profile-photo")
-    div.row
-        label.profile-name {{ name }}
-        label.user-location {{ location }}
-    div.row.activities
-        label.col-lg-4.activity-container(ng-repeat="activity in activities")
-            input.activity(type="image" src="{{ activity.image }}" name="selectedActivities[]" value="{{ activity.label }}" ng-checked="selectedActivites.indexOf(activity.key) > -1" ng-click="toggleSelection(activity.key)")
-            //{{ activity }}
+	div.row
+		img(src='{{ picture }}' class="user-profile-photo")
+	div.row
+		h2.profile-name {{ name }}
+		h5.user-location {{ location }}
+	div.row
+		div.activity-container(ng-repeat="activity in activities" ng-class="{ selected: isSelected( activity ) }")
+			a.activity(id="{{ activity }}" ng-click="toggleSelection(activity)")
+				span {{ activity }}
 input.button-bottom(type="image" src="/assets/submit_button.png" value="Submit")

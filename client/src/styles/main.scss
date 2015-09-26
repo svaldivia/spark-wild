@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 $phoneContainerWidth: 416px;
-$phoneContainerHeight: 672px;
+$phoneContainerHeight: 674px;
 
 @mixin linear-gradient($color-stops...) {
     // @if is-direction($direction) == false {
@@ -57,24 +57,71 @@ body {
     // background-color: red;
 }
 .activity-container{
-    padding:0;
+    width: 190px;
+    float: left;
+    margin: 1px;
+    border: 1px solid #54B28D;
+    background: #54B28D;
+    padding: 8px;
+    border-radius: 2px;
+    &.selected {
+       background: #4ba886;
+    }
 }
 .activity {
+    display: block;
+    cursor: pointer;
     width: 100%;
-    margin-bottom: -10px;
-    height: 120px;
-}
-
-.activities {
-    padding-top: 20px;
+    height: 90px;
+    position: relative;
+    &.selected {
+       span {
+        color: #000;
+       }
+    }
+    span {
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: bold;
+        vertical-align: bottom;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    &#hiking {
+        background: url( '/assets/hiking.png' ) no-repeat center top;
+    }
+    &#biking {
+        background: url( '/assets/biking.png' ) no-repeat center top;
+    }
+    &#climbing {
+        background: url( '/assets/climbing.png' ) no-repeat center top;
+    }
+    &#running {
+        background: url( '/assets/running.png' ) no-repeat center top;
+    }
+    &#tennis {
+        background: url( '/assets/tennis.png' ) no-repeat center top;
+    }
+    &#walking {
+        background: url( '/assets/walking.png' ) no-repeat center top;
+    }
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+    }
 }
 
 .profile-name {
-    font-size: 2em;
-    margin: 0 14%;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Montserrat";
 }
 
 .row{
+    text-align: center;
     margin:0;
 }
 
@@ -86,8 +133,10 @@ hr {
 }
 
 .page-title{
-    margin: 28px 24%;
+    margin: 20px auto;
     text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
 }
 
 .button-bottom{
@@ -97,16 +146,17 @@ hr {
 }
 
 .user-profile-photo {
-    width: 35%;
+    width: 25%;
     border-radius: 100%;
-    border: 5px white solid;
-    margin: 0 32%;
+    border: 3px white solid;
+    margin: 0 auto;
     margin-top: 25px;
 }
 
 .user-location {
     color: rgba( 255, 255, 255, 0.502 );
-    margin: 0 20%;
+    font-size: 16px;
+    font-weight: bold;
 }
 // <End> Profile Page
 
