@@ -1,1 +1,8 @@
-h2 Chat View
+h2 Chat
+
+div.messages(ng-repeat="message in messages")
+	span {{ message }}
+
+form.chat(ng-submit="submitMessage()")
+	input(type="text" placeholder="Enter message" ng-model="newMessage")
+	button(type="submit") Submit
