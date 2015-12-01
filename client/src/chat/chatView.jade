@@ -1,11 +1,14 @@
 nav.navbar.navbar-default.navbar-static-top
 	div.container-fluid.nav-wrapper
-			a(href="/map")
+			a(href="/chats")
 				img.navbar-back(src="/assets/back.png")
 			h2.username-chat Sarah Perez
 div.chat-background
+	img(src='/assets/text.png' class="test-text")
 	div.messages(ng-repeat="message in messages")
 		span.message {{ message }}
+		div.clear-msg
+		//- img.chathead(src='{{ picture }}' class="user-profile-photo")
 
 	form.chat.button-bottom(ng-submit="submitMessage()")
 		input.chatbox(type="text" placeholder="Start a conversation" ng-model="newMessage")
